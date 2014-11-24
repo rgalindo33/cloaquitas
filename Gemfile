@@ -29,15 +29,9 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 
 gem 'devise'
 gem 'foundation-rails'
@@ -46,6 +40,8 @@ gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'upmin-admin'
+
+gem 'pont_del_petroli'
 
 group :development do
   gem 'better_errors'
@@ -68,6 +64,8 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'pry'
+  gem 'awesome_print'
 end
 
 group :production do
