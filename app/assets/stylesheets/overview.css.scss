@@ -3,16 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html {
   font-family: 'Lato', sans-serif;
+  height: 100%;
 }
 
 body {
   background-color: #F0F0F0;
   color: #4B5969;
+  height: 100%;
 }
 
 .container {
   text-align: center;
-  h1 {
-    font-size: 40px;
-  }
+  height: 100%;
+}
+.swell {
+  padding: 30px 0 60px;
+  font-size: 60px;
+  background-color: #41B5E5;
+  height:100%;
+}
+.meteo {
+  background-color: #6CDFE9;
+  padding: 20px 0;
+  font-size: 30px;
 }

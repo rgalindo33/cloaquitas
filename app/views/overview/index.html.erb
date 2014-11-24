@@ -1,11 +1,11 @@
 <div class="container">
   <p> Datos de la boya actualizados el <%= @swell_data.timestamp.strftime("%m/%d/%y a las %I:%M%p") %></p>
-  <section class="swell">
-    <h1> <%= @swell_data.height %> m  @ <%= @swell_data.period %> s</h1>
-  </section>
   <section class="meteo">
     <h1> <%= @meteo_data.wind_speed %> m/s</h1>
     <h2> <%= @meteo_data.wind_direction %>º </h2>
-
+  </section>
+  <section class="swell">
+    <h1> <%= @swell_data.height %> m  @ <%= @swell_data.period %> s</h1>
+    <h2> <%= @swell_data.direction %>º </h2>
   </section>
 </div>
