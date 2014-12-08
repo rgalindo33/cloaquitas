@@ -1,11 +1,33 @@
-<div class="container">
-  <p> Datos de la boya actualizados el <%= @swell_data.timestamp.strftime("%m/%d/%y a las %I:%M%p") %></p>
-  <section class="meteo">
-    <h1> <%= @meteo_data.wind_speed %> m/s</h1>
-    <h2> <%= @meteo_data.wind_direction %>º </h2>
+<div class="row">
+  <section class="small-6 columns" id="graph">
+    
+    <div id="wind">
+      <div title="<%= @meteo_data.wind_direction %>º" class="wind_arrow arrow" style="transform: rotate(-<%= @meteo_data.wind_direction %>deg);"></div>
+    </div>
+
+    <div id="swell">
+      <div title="<%= @swell_data.direction %>º" class="swell_arrow arrow" style="transform: rotate(-<%= @swell_data.direction %>deg);"></div>
+    </div>
+
   </section>
-  <section class="swell">
-    <h1> <%= @swell_data.height %> m  @ <%= @swell_data.period %> s</h1>
-    <h2> <%= @swell_data.direction %>º </h2>
+  <section id="info" class="small-4 columns">
+    <div class="row">
+      <div class="small-12 colums"><%= @swell_data.height %><small>m</small></div>
+      <div class="small-12 small-offset-4 colums"><%= @swell_data.period %><small>s</small></div>
+    </div>
+    <div class="row">
+      <%= @meteo_data.wind_speed %><small>m/s</small>
+    </div>
+
+
+ 
+
+
   </section>
+
 </div>
+<div class="row">
+
+  <p class="small-offset-5 small-6-columns" id="timestamp"> <%= @swell_data.timestamp.strftime("%d/%m/%y a las %I:%M%p") %></p>
+</div>
+
