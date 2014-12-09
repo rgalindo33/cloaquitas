@@ -2,11 +2,11 @@
   <section class="small-6 columns" id="graph">
     
     <div id="wind">
-      <div title="<%= @meteo_data.wind_direction %>º" class="wind_arrow arrow" style="transform: rotate(-<%= @meteo_data.wind_direction %>deg); -webkit-transform: rotate(-<%= @meteo_data.wind_direction %>deg);"></div>
+      <div title="<%= @meteo_data.wind_direction %>º" class="wind_arrow arrow" style="transform: rotate(<%= @meteo_data.wind_direction %>deg); -webkit-transform: rotate(<%= @meteo_data.wind_direction %>deg);"></div>
     </div>
 
     <div id="swell">
-      <div title="<%= @swell_data.direction %>º" class="swell_arrow arrow" style="transform: rotate(-<%= @swell_data.direction %>deg); -webkit-transform: rotate(-<%= @swell_data.direction %>deg);"></div>
+      <div title="<%= @swell_data.direction %>º" class="swell_arrow arrow" style="transform: rotate(<%= @swell_data.direction %>deg); -webkit-transform: rotate(-<%= @swell_data.direction %>deg);"></div>
     </div>
 
   </section>
