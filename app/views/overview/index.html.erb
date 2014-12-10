@@ -1,33 +1,28 @@
-<div class="row">
-  <section class="small-6 columns" id="graph">
+<div class="row display">
+  <section class="small-12 medium-8 small-centered columns">
+    <div id="graph">
     
-    <div id="wind">
-      <div title="<%= @meteo_data.wind_direction %>º" class="wind_arrow arrow" style="transform: rotate(<%= @meteo_data.wind_direction %>deg); -webkit-transform: rotate(<%= @meteo_data.wind_direction %>deg);"></div>
-    </div>
+      <div id="wind">
+        <div title="<%= @meteo_data.wind_direction %>º" class="wind_arrow arrow" style="transform: rotate(<%= @meteo_data.wind_direction %>deg); -webkit-transform: rotate(<%= @meteo_data.wind_direction %>deg);"></div>
+      </div>
 
-    <div id="swell">
-      <div title="<%= @swell_data.direction %>º" class="swell_arrow arrow" style="transform: rotate(<%= @swell_data.direction %>deg); -webkit-transform: rotate(-<%= @swell_data.direction %>deg);"></div>
+      <div id="swell">
+        <div title="<%= @swell_data.direction %>º" class="swell_arrow arrow" style="transform: rotate(<%= @swell_data.direction %>deg); -webkit-transform: rotate(-<%= @swell_data.direction %>deg);"></div>
+      </div>
     </div>
-
   </section>
-  <section id="info" class="small-4 columns">
-    <div class="row">
-      <div class="small-12 colums"><%= @swell_data.height %><small>m</small></div>
-      <div class="small-12 small-offset-4 colums"><%= @swell_data.period %><small>s</small></div>
+
+  <section id="info" class="small-12 medium-8 small-centered columns">
+    <div class="row display">
+      <div class="small-4 columns"><%= @swell_data.height %><small>m</small></div>
+      <div class="small-4 columns"><%= @swell_data.period %><small>s</small></div>
+      <div class="small-4 columns"><%= @meteo_data.wind_speed %><small>m/s</small></div>
     </div>
-    <div class="row">
-      <%= @meteo_data.wind_speed %><small>m/s</small>
-    </div>
-
-
- 
-
-
   </section>
 
 </div>
 <div class="row">
 
-  <p class="small-6 small-centered columns" id="timestamp"> <%= @swell_data.timestamp.strftime("%d/%m/%y a las %I:%M%p") %></p>
+  <p class="small-12 medium-8 small-centered columns" id="timestamp"> <%= @swell_data.timestamp.strftime("%d/%m/%y a las %I:%M%p") %></p>
 </div>
 
