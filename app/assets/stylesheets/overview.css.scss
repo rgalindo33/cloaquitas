@@ -9,9 +9,6 @@ body {
   font-family: 'Dorsa', sans-serif;
   margin:1rem;
 
-  p {
-    font-size: 4rem;
-  }
 }
 .row.display {
   margin-bottom:2rem;
@@ -77,8 +74,8 @@ iVBORw0KGgoAAAANSUhEUgAAAMgAAADVCAYAAAASEL/bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lD
 @media only screen { 
   #info {
     margin-top: 2rem;
-    font-size: 10rem;
-    // line-height: rem;
+    font-size: 7rem;
+    line-height: normal;
   }
   #graph {
     width: 274px;
@@ -114,7 +111,11 @@ iVBORw0KGgoAAAANSUhEUgAAAMgAAADVCAYAAAASEL/bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lD
     background-size: 500px 500px;
   }
 }
-@media only screen and (min-width: 64.063em) { 
+@media only screen and (min-width: 64.063em) {   
+  #info {
+    margin-top: 2rem;
+    font-size: 10rem;
+  }
   #graph {
     width: 560px;
     height: 560px;
