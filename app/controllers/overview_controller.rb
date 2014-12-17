@@ -3,9 +3,9 @@ class OverviewController < ApplicationController
   layout 'application'
 
   def index
-    buoy = PontDelPetroli.now
+    live_data = PontDelPetroli.now
 
-    @swell_data = buoy.swell_data
-    @meteo_data = buoy.meteo_data
+    @swell_data = live_data.swell_data
+    @meteo_data = live_data.meteo_data
   end
 end
