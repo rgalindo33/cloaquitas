@@ -1,7 +1,7 @@
 <div class="row display">
   <section class="small-12 medium-8 small-centered columns">
     <div id="graph">
-    
+
       <div id="wind">
         <div title="<%= @meteo_data.wind_direction %>º" class="wind_arrow arrow" style="transform: rotate(<%= @meteo_data.wind_direction %>deg); -webkit-transform: rotate(<%= @meteo_data.wind_direction %>deg);"></div>
       </div>
@@ -14,17 +14,17 @@
 
   <section id="info" class="small-12 medium-8 small-centered columns">
     <div class="row display">
-      <div class="small-4 columns"><%= @swell_data.height %><small>m</small></div>
-      <div class="small-4 columns"><%= @swell_data.period %><small>s</small></div>
       <div class="small-4 columns"><%= @meteo_data.wind_speed %><small>m/s</small></div>
+      <div class="small-4 columns"><%= @swell_data.period %><small>s</small></div>
+      <div class="small-4 columns"><%= @swell_data.height %><small>m</small></div>
     </div>
   </section>
 
-  <p class="small-12 medium-8 small-centered columns" id="timestamp"> 
+  <p class="small-12 medium-8 small-centered columns" id="timestamp">
     <%= @swell_data.timestamp.strftime("%d/%m/%y a las %I:%M%p") %>
   </p>
 </div>
-           
+
 <div class="row" id="historic_data">
   <div class="large-12 columns">
     <table class="chart">
@@ -36,21 +36,21 @@
             </td>
 
             <td>
-              <p><%= data.period %>s</p>
+              <p><%= data.wind_speed %>m/s<span class="wind_arrow" title="<%= data.wind_direction %>º"  style="transform: rotate(<%= data.wind_direction %>deg); -webkit-transform: rotate(<%= data.wind_direction %>deg);"></span></p>
             </td>
             <!-- <td class="chart"> -->
             <td>
-              <p><%= data.height %>m <span class="swell_arrow" title="<%= data.direction %>º"  style="transform: rotate(<%= data.direction %>deg); -webkit-transform: rotate(<%= data.direction %>deg);"></span></p>
+              <p><%= data.period %>s</p>
               <!-- <div class="barchart">
                 <span class="meter" style="width: <%= percentage_for data.height %>%"></span>
               </div> -->
             </td>
             <td>
-              <p><%= data.wind_speed %>m/s<span class="wind_arrow" title="<%= data.wind_direction %>º"  style="transform: rotate(<%= data.wind_direction %>deg); -webkit-transform: rotate(<%= data.wind_direction %>deg);"></span></p>
+              <p><%= data.height %>m <span class="swell_arrow" title="<%= data.direction %>º"  style="transform: rotate(<%= data.direction %>deg); -webkit-transform: rotate(<%= data.direction %>deg);"></span></p>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
-</div>          
+</div>
