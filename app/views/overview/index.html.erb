@@ -34,9 +34,8 @@
             <td>
               <p class="percentage"><%= time_decorator data.timestamp %></p>
             </td>
-
             <td>
-              <p><%= data.wind_speed %>m/s<span class="wind_arrow" title="<%= data.wind_direction %>º"  style="transform: rotate(<%= data.wind_direction %>deg); -webkit-transform: rotate(<%= data.wind_direction %>deg);"></span></p>
+              <p><%= data.wind_speed %>m/s</p><span class="wind_arrow" title="<%= data.wind_direction %>º"  style="transform: rotate(<%= data.wind_direction %>deg); -webkit-transform: rotate(<%= data.wind_direction %>deg);"></span>
             </td>
             <!-- <td class="chart"> -->
             <td>
@@ -46,7 +45,7 @@
               </div> -->
             </td>
             <td>
-              <p><%= data.height %>m <span class="swell_arrow" title="<%= data.direction %>º"  style="transform: rotate(<%= data.direction %>deg); -webkit-transform: rotate(<%= data.direction %>deg);"></span></p>
+              <p><%= data.height %>m </p><span class="swell_arrow" title="<%= data.direction %>º"  style="transform: rotate(<%= data.direction %>deg); -webkit-transform: rotate(<%= data.direction %>deg);"></span>
             </td>
           </tr>
         <% end %>
